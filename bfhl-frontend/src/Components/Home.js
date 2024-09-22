@@ -39,7 +39,7 @@ function App() {
     const { numbers, alphabets, highest_alphabet } = response;
 
     return (
-      <div>
+      <div className="response-container">
         {selectedOptions.includes('Numbers') && (
           <div>
             <h3>Numbers:</h3>
@@ -63,7 +63,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>FILL AND CHECK</h1>
       <textarea
         value={jsonInput}
@@ -73,8 +73,8 @@ function App() {
         cols="50"
       />
       <button onClick={handleSubmit}>Submit</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div>
+      {error && <p className="error-message">{error}</p>}
+      <div className="checkbox-group">
         <label>
           <input
             type="checkbox"
